@@ -1,6 +1,4 @@
-const Initial = {
-    count: 0,
-}
+import { Initial } from "./actions.js";
 
 let states = [Initial];
 const notifiers = [];
@@ -28,3 +26,9 @@ export const subscribe = (notify) => {
   }
   return unsubscribe
 }
+
+export const get = (state, key) => {
+    return state[key]
+}
+
+export { states };
