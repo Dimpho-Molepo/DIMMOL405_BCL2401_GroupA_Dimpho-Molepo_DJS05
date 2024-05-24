@@ -1,6 +1,11 @@
 import { subscribe, update, get, states } from "./store.js";
 import { ADD, SUBTRACT, RESET } from "./actions.js";
 
+/** A function that logs the previous and next states of the store.
+ * 
+ * @param {Object} prev - The previous state.
+ * @param {Object} next - The next state.
+*/
 const handler = (prev, next) => console.log(prev, next)
 const unsubscribe = subscribe(handler)
 
