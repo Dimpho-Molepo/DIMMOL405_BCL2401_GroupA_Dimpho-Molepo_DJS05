@@ -18,3 +18,13 @@ export const update = (action) => {
   states.unshift(next)
 }
 
+export const subscribe = (notify) => {
+  notifiers.push(notify)
+
+  const unsubscribe = () => {
+    const handler = (current) => current !== notify
+    const result = notifiers.filter(handler)
+    notifiers = result
+  }
+  return unsubscribe
+}
