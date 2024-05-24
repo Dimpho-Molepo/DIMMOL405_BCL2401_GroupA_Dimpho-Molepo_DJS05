@@ -1,14 +1,13 @@
-# DJS05 Project Brief: Building a Redux-Inspired Store for a Tally App
+# DJS05: Building a Redux-Inspired Store for a Tally App
 
 In this challenge, you will venture into the realm of state management by constructing a Redux-inspired store to manage the state of a simple Tally App. Your primary goal is to manage the app's state changes efficiently, focusing on core functionalities like incrementing, decrementing, and resetting a counter. Instead of rendering changes on the UI, you'll subscribe to state updates and log them to the console, highlighting the power of state management in applications.
 
-## Objective
+## Project Objective
 Create a minimalistic, Redux-inspired store to manage and log the state of a counting Tally App. Your implementation will not involve UI rendering; instead, it will use console logs to demonstrate state management effectively.
 
-Observer Pattern resource from Refactoring Guru: https://refactoring.guru/design-patterns/observer
 
 ## User Stories (Gherkin Syntax)
-Your challenge will encompass the following scenarios, tested through your store's implementation:
+
 
 ### SCENARIO 1: Initial State Verification
 ```
@@ -53,17 +52,23 @@ THEN the state should display a count of 0
 - **No UI Rendering**: This challenge focuses on state management without the complexity of UI rendering. All state changes should be observable through console logs.
 - **Functional Programming Principles**: Draw upon functional programming concepts as illustrated in the reference videos. While Redux is the inspiration, you're encouraged to apply these principles creatively in your implementation.
 
-## Submission Guidelines
-Your submission should consist of a JavaScript file(s) that encapsulate your Redux-inspired store and the logic for dispatching actions and subscribing to changes. Include a README.md file explaining:
-- How to run your code.
-- A brief overview of your approach.
-- Any challenges you faced and how you overcame them.
+## Discussion and Reflection
 
-Ensure your code is well-commented and adheres to best practices for readability and maintainability.
+### Discussion
+- What are the benefits of using a global store to manage state? How does this compare to managing state in a component? What are the tradeoffs? What are the benefits of using a global store to manage state? How does this compare to managing state in a component? What are the tradeoffs? What are the benefits of using a global store to manage state? How does this compare to managing state in a component? What are the tradeoffs?
 
-## Evaluation Criteria
-- **Correctness**: Your implementation should correctly handle the scenarios as outlined in the user stories.
-- **Code Quality**: Use of functional programming principles, clear naming conventions, and code organization.
-- **Documentation**: Clarity of your approach and reflections in the README.md.
+This project has introduced us to centralized state management and a global store which provides centrilized, scalable, and maintainable solution for state management but it also requires more setup and configuration. 
+- In this project I initialized the initial state as an object that holds the initial state.
+= I defined the add, subtract and reset functions in the actions.js file. These functions change the count property of the state.
+- In the store.js I initialized the states to contain the states for the store and notifiers to contain the functions that are currrently subscribed to the store. 
+- I created the subscribe function to subscribe a function to the store which is called state of the store is changed and returns the unsubscribe function.
+- I created the get function to fetch the state at a certian key of the store.
+- I exported the states to be used in other scripts.
+- I created the script.js to console log the state of the store when the counter is incremented, decremented and reset.
 
-This challenge is an excellent opportunity to demonstrate your understanding of state management concepts and functional programming principles. Good luck!
+
+### Challenges
+These are the most powerful and I believe the most complex concepts that we have learned. Rome was not built in one day, with that being said I don't think I have fully grasped the underlaying concepts of this project but I really think its possible to although it will surely take time, it will happen. Understanding functional programming is a crucial skill I strongly believe we should have in our arsenal.I had to look up how to use the subscribe function to subscribe to the store and how to unsubscribe from the store. I had to look up how to use the get function to get the state of the store. I had to do extensive research to actually attempt and complete this project.
+
+## Author
+Dimpho Molepo
