@@ -1,4 +1,4 @@
-import { Initial } from "./actions.js";
+import { Initial } from "./initialState.js";
 
 let states = [Initial];
 const notifiers = [];
